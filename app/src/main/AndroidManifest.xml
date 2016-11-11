@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.anvita.quiz">
+
+    <application
+        android:name=".GlobalClass"
+        android:allowBackup="true"
+        android:icon="@drawable/abacus"
+        android:label="Quiz"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Welcome">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SelectActivity" />
+
+        <activity android:name=".Addition"
+            android:parentActivityName=".SelectActivity"/>
+
+        <activity android:name=".Final"
+            android:parentActivityName=".SelectActivity"/>
+
+        <activity android:name=".Subtraction"
+            android:parentActivityName=".SelectActivity" />
+
+        <activity android:name=".Multiplication"
+            android:parentActivityName=".SelectActivity"/>
+
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".SelectActivity" />
+
+    </application>
+
+</manifest>
